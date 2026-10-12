@@ -1,11 +1,11 @@
 {
-    "name": "e1_orlik",
-    "short_name": "e1_orlik",
+    "name": "E1 Orlik",
+    "short_name": "E1 Orlik",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#388E3C",
+    "theme_color": "#388E3C",
+    "description": "Terminarz i wyniki rozgrywek piłkarskich E1 Orlik.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

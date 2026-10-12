@@ -16,18 +16,19 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Terminarz Meczowy">
+  <meta name="theme-color" content="#388E3C">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="e1_orlik">
+  <meta name="apple-mobile-web-app-title" content="E1 Orlik">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <title>e1_orlik</title>
+  <title>E1 Orlik</title>
   <link rel="manifest" href="manifest.json">
   
   
@@ -121,5 +122,20 @@
   -->
   <script src="flutter_bootstrap.js" async=""></script>
 
+  <script>
+    window.installPromptEvent = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      window.installPromptEvent = e;
+    });
+
+    window.triggerInstallPrompt = async () => {
+      if (window.installPromptEvent) {
+        window.installPromptEvent.prompt();
+        const { outcome } = await window.installPromptEvent.userChoice;
+        window.installPromptEvent = null;
+      }
+    };
+  </script>
 
 </body></html>
